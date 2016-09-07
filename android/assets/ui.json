@@ -1,0 +1,12 @@
+{
+  com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+    default: {
+
+    }
+  },
+  com.badlogic.gdx.scenes.scene2d.ui.Touchpad$TouchpadStyle: {
+    default: {
+      background: touchpad_base, knob: touchpad_nob
+    }
+  }
+}

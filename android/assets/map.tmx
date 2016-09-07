@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="9" tilewidth="128" tileheight="128" nextobjectid="19">
+ <tileset firstgid="1" name="pack" tilewidth="128" tileheight="128" spacing="4" margin="2" tilecount="75" columns="15">
+  <image source="pack.png" width="1980" height="660"/>
+ </tileset>
+ <objectgroup name="Object Layer 3">
+  <object id="17" gid="6" x="617.333" y="913.333" width="272" height="264"/>
+  <object id="18" gid="6" x="1593.33" y="964" width="272" height="264"/>
+ </objectgroup>
+ <objectgroup name="Object Layer 1">
+  <object id="4" gid="46" x="166.667" y="913.333" width="128" height="128"/>
+  <object id="6" gid="72" x="314.667" y="922.667" width="128" height="128"/>
+  <object id="7" gid="50" x="532" y="908" width="128" height="128"/>
+  <object id="8" gid="56" x="1142.67" y="909.333" width="128" height="128"/>
+  <object id="9" gid="62" x="1358.67" y="918.667" width="128" height="128"/>
+  <object id="10" gid="31" x="1481.33" y="914.667" width="128" height="128"/>
+  <object id="11" gid="56" x="1860" y="941.333" width="128" height="128"/>
+  <object id="12" gid="67" x="1920" y="914.667" width="128" height="128"/>
+ </objectgroup>
+ <objectgroup name="Object Layer 2">
+  <object id="13" gid="46" x="242.667" y="957.333" width="128" height="128"/>
+  <object id="14" gid="2" x="901.33" y="906.667" width="128" height="128"/>
+  <object id="15" gid="51" x="1417.33" y="905.333" width="128" height="128"/>
+ </objectgroup>
+ <layer name="Tile Layer 1" width="16" height="9">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+37,52,21,37,53,37,21,37,53,37,21,37,53,37,36,36,
+66,3,66,3,3,66,66,3,66,3,4,66,3,3,66,66
+</data>
+ </layer>
+</map>

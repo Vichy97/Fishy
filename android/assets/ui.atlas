@@ -1,0 +1,20 @@
+
+ui.png
+size: 520,324
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+touchpad_base
+  rotate: false
+  xy: 2, 2
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+touchpad_nob
+  rotate: false
+  xy: 326, 128
+  size: 192, 194
+  orig: 192, 194
+  offset: 0, 0
+  index: -1
