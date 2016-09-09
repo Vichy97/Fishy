@@ -108,12 +108,14 @@ public class GameScreen implements Screen, InputProcessor {
 
     public GameScreen(MyGdxGame game, OrthographicCamera gameCamera, Viewport gameViewport, OrthographicCamera uiCamera, Viewport uiViewport) {
         debug("constructor");
-
+        
         this.game = game;
         this.gameCamera = gameCamera;
         this.gameViewport = gameViewport;
         this.uiCamera = uiCamera;
         this.uiViewport = uiViewport;
+
+        Gdx.input.setCatchBackKey(true);
 
         gameCamera.setToOrtho(false, 16, 9);
         gameViewport.apply();
@@ -191,6 +193,11 @@ public class GameScreen implements Screen, InputProcessor {
 
     @Override
     public void render(float delta) {
+
+        if (Gdx.input.isKeyPressed(Input.Keys.BACK)){
+            Gdx.app.exit();
+        }
+
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         Gdx.gl.glClearColor(176f / 255f, 233f / 255f, 250f / 252f, 1);
 
@@ -214,7 +221,9 @@ public class GameScreen implements Screen, InputProcessor {
 
                 if (touchpad.getKnobPercentY() != 0 || touchpad.getKnobPercentX() != 0) {
                     float angle = GameUtils.getTouchpadAngle(touchpad.getKnobPercentX(), touchpad.getKnobPercentY());
-                    fish.setRotation(angle);
+                    if (angle > -180 && angle < 180) {
+                        fish.setRotation(angle);
+                    }
                     if (fish.getFloatSpeed() < 15) {
                         fish.setSpeed(fish.getFloatSpeed() + .3f);
                     } else {
@@ -287,7 +296,6 @@ public class GameScreen implements Screen, InputProcessor {
                 //debugRenderer.render(world, gameCamera.combined);
                 doPhysicsStep(delta);
 
-                //stateLabel.setText(fish.getPosition().toString());
                 break;
             } case 3: {
                 break;
@@ -400,7 +408,6 @@ public class GameScreen implements Screen, InputProcessor {
         body.createFixture(fixtureDef);
 
         bodyDef.type = BodyDef.BodyType.DynamicBody;
-        //bodyDef.position.set(-MyGdxGame.GAME_WIDTH / 2 * MyGdxGame.UNIT_SCALE, 0);
         fixtureDef.shape = new CircleShape();
 
     }
@@ -542,7 +549,10 @@ public class GameScreen implements Screen, InputProcessor {
 
     @Override
     public boolean keyDown(int keycode) {
-        if (keycode == Input.Keys.UP) {
+        if (keycode == Input.Keys.BACK) {
+            System.gc();
+            Gdx.app.exit();
+        } else if (keycode == Input.Keys.UP) {
             upPressed = true;
         } else if (keycode == Input.Keys.RIGHT) {
             rightPressed = true;

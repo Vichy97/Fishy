@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.assets.loaders.TextureLoader;
 import com.badlogic.gdx.assets.loaders.resolvers.InternalFileHandleResolver;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -44,6 +45,8 @@ public class AssetLoader {
     public static Sprite bubble;
     public static Sprite skeleton1, skeleton2, skeleton3;
     public static ArrayList<Sprite> fishes = new ArrayList<Sprite>();
+    public static Sound burp;
+
 
 
 
@@ -60,6 +63,7 @@ public class AssetLoader {
         manager.load("pack.atlas", TextureAtlas.class);
         manager.setLoader(TiledMap.class, new TmxMapLoader(new InternalFileHandleResolver()));
         manager.load("map.tmx", TiledMap.class);
+        manager.load("burp.ogg", Sound.class);
     }
 
     public static boolean update() {
@@ -97,6 +101,8 @@ public class AssetLoader {
         skeleton1 = fishyAtlas.createSprite("fishTile_092");
         skeleton2 = fishyAtlas.createSprite("fishTile_090");
         skeleton3 = fishyAtlas.createSprite("fishTile_096");
+
+        burp = manager.get("burp.ogg", Sound.class);
     }
 
     //creates a freetype bitmap font

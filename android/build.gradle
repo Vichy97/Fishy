@@ -22,7 +22,7 @@ android {
     }
     defaultConfig {
         applicationId "com.startcat.fishy"
-        minSdkVersion 8
+        minSdkVersion 9
         targetSdkVersion 24
     }
 }

@@ -18,25 +18,25 @@ public class ContactListener implements com.badlogic.gdx.physics.box2d.ContactLi
             Fish fish1 = (Fish) (contact.getFixtureA().getBody().getUserData());
             Fish fish2 = (Fish) (contact.getFixtureB().getBody().getUserData());
 
-            //Gdx.app.log("fish", "collision");
-
             GameScreen.incrementScore();
 
             if (fish1.getSize() > fish2.getSize()) {
                 fish2.setAlive(false);
-                if (fish2.getSize() < 1) {
+                if (fish2.getSize() < 1 && fish1.getSize() < 1) {
                     fish1.setSize(fish1.getSize() + .015f);
                 } else {
                     fish1.setSize(fish1.getSize() + fish2.getSize() * .015f);
                 }
             } else {
                 fish1.setAlive(false);
-                if (fish1.getSize() < 1) {
+                if (fish1.getSize() < 1 && fish2.getSize() < 1) {
                     fish2.setSize(fish2.getSize() + .015f);
                 } else {
                     fish2.setSize(fish2.getSize() + fish1.getSize() * .015f);
                 }
             }
+
+            AssetLoader.burp.play();
         }
 
     }
