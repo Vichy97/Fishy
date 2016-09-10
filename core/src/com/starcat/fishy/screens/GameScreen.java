@@ -589,6 +589,7 @@ public class GameScreen implements Screen, InputProcessor {
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         switch (STATE) {
             case 1: {
+                AssetLoader.click.play(2);
                 setState(2);
                 break;
             } case 2: {
@@ -599,9 +600,11 @@ public class GameScreen implements Screen, InputProcessor {
                 touchpad.fire(fakeTouchEvent);
                 break;
             } case 3: {
+                AssetLoader.click.play(2);
                 setState(1);
                 break;
             }case 4: {
+                AssetLoader.click.play(2);
                 setState(1);
                 break;
             }
