@@ -19,10 +19,11 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.starcat.fishy.MyGdxGame;
+import com.starcat.fishy.R;
 
 public class AndroidLauncher extends AndroidApplication {
 
-	private static final String AD_UNIT_ID = "ca-app-pub-6916351754834612/3101802628";
+	private static final String AD_UNIT_ID = "ca-app-pub-2074837269748777/3172810843";
 	protected AdView adView;
 	protected View gameView;
 

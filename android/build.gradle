@@ -21,7 +21,7 @@ android {
         instrumentTest.setRoot('tests')
     }
     defaultConfig {
-        applicationId "com.starcat.fishy"
+        applicationId "com.starcat.fishy.free"
         minSdkVersion 9
         targetSdkVersion 24
     }
