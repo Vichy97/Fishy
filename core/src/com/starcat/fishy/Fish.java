@@ -9,7 +9,7 @@ import com.badlogic.gdx.utils.Pool;
 /**
  * Created by Vincent on 9/2/2016.
  */
-public class Fish implements Pool.Poolable{
+public class Fish implements Pool.Poolable {
 
     protected Body body;
     protected Sprite sprite;
