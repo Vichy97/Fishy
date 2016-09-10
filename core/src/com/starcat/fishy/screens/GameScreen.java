@@ -550,8 +550,10 @@ public class GameScreen implements Screen, InputProcessor {
     @Override
     public boolean keyDown(int keycode) {
         if (keycode == Input.Keys.BACK) {
-            System.gc();
+            SCORE = 0;
+            AssetLoader.dispose();
             Gdx.app.exit();
+            System.gc();
         } else if (keycode == Input.Keys.UP) {
             upPressed = true;
         } else if (keycode == Input.Keys.RIGHT) {
@@ -589,7 +591,7 @@ public class GameScreen implements Screen, InputProcessor {
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         switch (STATE) {
             case 1: {
-                AssetLoader.click.play(2);
+                AssetLoader.click.play();
                 setState(2);
                 break;
             } case 2: {
@@ -600,11 +602,11 @@ public class GameScreen implements Screen, InputProcessor {
                 touchpad.fire(fakeTouchEvent);
                 break;
             } case 3: {
-                AssetLoader.click.play(2);
+                AssetLoader.click.play();
                 setState(1);
                 break;
             }case 4: {
-                AssetLoader.click.play(2);
+                AssetLoader.click.play();
                 setState(1);
                 break;
             }

@@ -36,7 +36,7 @@ public class ContactListener implements com.badlogic.gdx.physics.box2d.ContactLi
                 }
             }
 
-            AssetLoader.burp.play(2);
+            AssetLoader.burp.play(1);
         }
 
     }
