@@ -23,16 +23,16 @@ public class ContactListener implements com.badlogic.gdx.physics.box2d.ContactLi
             if (fish1.getSize() > fish2.getSize()) {
                 fish2.setAlive(false);
                 if (fish2.getSize() < 1 && fish1.getSize() < 1) {
-                    fish1.setSize(fish1.getSize() + .015f);
+                    fish1.setSize(fish1.getSize() + .025f);
                 } else {
-                    fish1.setSize(fish1.getSize() + fish2.getSize() * .015f);
+                    fish1.setSize(fish1.getSize() + fish2.getSize() * .023f);
                 }
             } else {
                 fish1.setAlive(false);
                 if (fish1.getSize() < 1 && fish2.getSize() < 1) {
-                    fish2.setSize(fish2.getSize() + .015f);
+                    fish2.setSize(fish2.getSize() + .025f);
                 } else {
-                    fish2.setSize(fish2.getSize() + fish1.getSize() * .015f);
+                    fish2.setSize(fish2.getSize() + fish1.getSize() * .023f);
                 }
             }
 
