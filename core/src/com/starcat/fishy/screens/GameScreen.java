@@ -150,7 +150,7 @@ public class GameScreen implements Screen, InputProcessor {
                     enemyFish.add(fish);
                 }
             }
-        }, 0, 1.2f);
+        }, 0, 1.3f);
 
         timer.scheduleTask(new Timer.Task() {
             @Override
@@ -164,7 +164,7 @@ public class GameScreen implements Screen, InputProcessor {
                     enemyFish.add(fish);
                 }
             }
-        }, 0, 1.2f);
+        }, 0, 1.3f);
 
         timer.scheduleTask(new Timer.Task() {
             @Override
